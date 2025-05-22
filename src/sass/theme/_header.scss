@@ -5,7 +5,11 @@ header {
         background-color: var(--col-pbh-blue);
     }
 
-    transition: var(--transition);
+    transition: transform var(--transition);
+
+    &.hidden {
+        transform: translateY(-100%);
+    }
 
     border-bottom: .375rem solid var(--col-pbh-white);
 

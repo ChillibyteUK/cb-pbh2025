@@ -1,70 +1,31 @@
-// Add your custom JS here.
-// AOS.init({
-//   easing: 'ease-out',
-//   once: true
-// });
+/**
+ * hide navigation
+ **/
 
-/*
-(function() {
-  // Hide header on scroll
-  var doc = document.documentElement;
-  var w = window;
-
-  var prevScroll = w.scrollY || doc.scrollTop;
-  var curScroll;
-  var direction = 0;
-  var prevDirection = 0;
-
-  var header = document.getElementById('wrapper-navbar');
-
-  var checkScroll = function() {
-      // Find the direction of scroll (0 - initial, 1 - up, 2 - down)
-      curScroll = w.scrollY || doc.scrollTop;
-      if (curScroll > prevScroll) {
-          // Scrolled down
-          direction = 2;
-      } else if (curScroll < prevScroll) {
-          // Scrolled up
-          direction = 1;
-      }
-
-      if (direction !== prevDirection) {
-          toggleHeader(direction, curScroll);
-      }
-
-      prevScroll = curScroll;
-  };
-
-  var toggleHeader = function(direction, curScroll) {
-      if (direction === 2 && curScroll > 125) {
-          // Replace 52 with the height of your header in px
-          if (!document.getElementById('navbar').classList.contains('show')) {
-              header.classList.add('hide');
-              prevDirection = direction;
-          }
-      } else if (direction === 1) {
-          header.classList.remove('hide');
-          prevDirection = direction;
-      }
-  };
-
-  window.addEventListener('scroll', checkScroll);
-
-  // Header background
-  document.addEventListener('scroll', function() {
-      var nav = document.getElementById('navbar');
-    //   var primaryNav = document.getElementById('primaryNav');
-    //   if (!primaryNav.classList.contains('show')) {
-    //       nav.classList.toggle('scrolled', window.scrollY > nav.offsetHeight);
-    //   }
-      document.querySelectorAll('.dropdown-menu').forEach(function(dropdown) {
-          dropdown.classList.remove('show');
-      });
-      document.querySelectorAll('.dropdown-toggle').forEach(function(toggle) {
-          toggle.classList.remove('show');
-          toggle.blur();
-      });
+document.addEventListener('DOMContentLoaded', function() {
+    var mainNav = document.querySelector('header');
+    var lastScrollTop = 0;
+    var threshold = 85; // Minimum scroll distance before toggling
+  
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+  
+        // Prevent negative scrollTop (elastic scroll) from causing issues
+        if (scrollTop < 0) {
+            scrollTop = 0;
+        }
+  
+        // Check if scrolled by at least 85px before applying the class change
+        if (Math.abs(scrollTop - lastScrollTop) >= threshold) {
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                mainNav.classList.add('hidden');
+            } else {
+                // Scrolling up
+                mainNav.classList.remove('hidden');
+            }
+  
+            lastScrollTop = scrollTop; // Update the last scroll position
+        }
+    });
   });
-
-*/
-

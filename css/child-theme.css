@@ -21637,11 +21637,14 @@ strong,
 
 header {
   background-color: var(--col-pbh-black);
-  transition: var(--transition);
+  transition: transform var(--transition);
   border-bottom: 0.375rem solid var(--col-pbh-white);
 }
 header.header-blue {
   background-color: var(--col-pbh-blue);
+}
+header.hidden {
+  transform: translateY(-100%);
 }
 header a.nav-link {
   color: var(--col-pbh-white);
@@ -22040,7 +22043,6 @@ for (; i < all.length; i++) {
 .page {
   background-color: var(--col-pbh-black);
   color: var(--col-pbh-white);
-  padding-top: 3rem;
 }
 .single-work__hero,
 .page__hero {
