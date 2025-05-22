@@ -21728,7 +21728,7 @@ header .dropdown.current-menu-item > .nav-link::before {
   line-height: 1;
   border-radius: 100vw;
   background-color: var(--col-pbh-black);
-  color: white;
+  color: white !important;
   text-decoration: none;
 }
 .footer .footer-social a:hover {
