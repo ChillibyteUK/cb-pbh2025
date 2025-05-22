@@ -7,9 +7,9 @@
     line-height: 1.75rem;
     text-transform: uppercase;
     a {
-        color: var(--col-pbh-black);
+        color: var(--col-pbh-black) !important;
         &:hover {
-            color: var(--col-pbh-pink);
+            color: var(--col-pbh-pink) !important;
         }
     }
     .footer-social {

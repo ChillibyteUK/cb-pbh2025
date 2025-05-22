@@ -21714,10 +21714,10 @@ header .dropdown.current-menu-item > .nav-link::before {
   text-transform: uppercase;
 }
 .footer a {
-  color: var(--col-pbh-black);
+  color: var(--col-pbh-black) !important;
 }
 .footer a:hover {
-  color: var(--col-pbh-pink);
+  color: var(--col-pbh-pink) !important;
 }
 .footer .footer-social a {
   display: grid;

@@ -7,6 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 get_header();
+set_query_var( 'contact_class', 'contact--alt' );
 ?>
 <main id="main" class="blog">
     <div class="container p-5">

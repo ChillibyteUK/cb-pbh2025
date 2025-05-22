@@ -5,11 +5,7 @@
  * @package cb-pbh2025
  */
 
-$classes = '';
-
-if ( is_single()) {
-	$classes = 'contact--alt';
-}
+$classes = get_query_var( 'contact_class', '' ) ?? null;
 
 ?>
 <a class="contact <?= esc_attr( $classes ); ?>" href="/contact/">
