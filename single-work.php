@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 ?>
 <main id="main" class="single-work">
-	<div class="container">
+	<div class="container pt-5">
 		<?= get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'single-work__hero mb-5' ) ); ?>
 		<?php
 		if ( wp_get_attachment_image( get_field( 'logo' ), 'full' ) ) {

@@ -15,7 +15,7 @@ get_header();
     <?php
 	if ( ! is_front_page() ) {
 		?>
-		<div class="container">
+		<div class="container pt-5">
 		<?php
 		$hero = get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'page__hero mb-5' ) );
 		if ( $hero ) {
