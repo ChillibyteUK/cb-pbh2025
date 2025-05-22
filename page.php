@@ -33,7 +33,7 @@ get_header();
 	// phpcs:enable
 	if ( ! is_front_page() ) {
 		?>
-		<div class="text-center py-5 single-work__back">
+		<div class="text-center py-5 back">
 			<a href="/">Back</a>
 		</div>
 	</div>
